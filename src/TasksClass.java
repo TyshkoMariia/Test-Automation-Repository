@@ -91,12 +91,23 @@ public class TasksClass {  // TasksClass
 
     public static void main(String[] args) {
 
-        TasksClass print = new TasksClass();
+       /* TasksClass print = new TasksClass();
         print.printVariables();
         print.printLists();
         print.printMaxValue(-16, -17);
         print.printRequestedListElement();
-        print.printMinValueOfTheList();
+        print.printMinValueOfTheList();*/
 
+        Workers dex = new Workers();
+        dex.setName("Dex");
+        dex.setLastName("Newton");
+        dex.setId(1);
+        dex.CalculateTotalSalaryPayedPerHour(20.8);
+
+        Workers ann = new Workers();
+        ann.setName("Ann");
+        ann.setLastName("Brown");
+        ann.setId(2);
+        ann.PrintAvarageSalary(7655.11);
     }
 }
