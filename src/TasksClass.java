@@ -96,7 +96,7 @@ public class TasksClass {  // TasksClass
         print.printLists();
         print.printMaxValue(-16, -17);
         print.printRequestedListElement();
-        print.printMinValueOfTheList();*/
+        print.printMinValueOfTheList();
 
         Workers dex = new Workers();
         dex.setName("Dex");
@@ -108,6 +108,24 @@ public class TasksClass {  // TasksClass
         ann.setName("Ann");
         ann.setLastName("Brown");
         ann.setId(2);
-        ann.PrintAvarageSalary(7655.11);
+        ann.PrintAvarageSalary(7655.11);*/
+
+        FixedRateWorker Dex = new FixedRateWorker();
+        Dex.setName("Dex");
+        Dex.setLastName("Hunter");
+        Dex.setId(17);
+        System.out.println(Dex.getName());
+        System.out.println(Dex.getLastName());
+        System.out.println(Dex.getId());
+        Dex.getCalculatedSalary(3700.5);
+
+        HourlyRateWorker Ann = new HourlyRateWorker();
+        Ann.setName("Ann");
+        Ann.setLastName("Baker");
+        Ann.setId(34);
+        System.out.println(Ann.getName());
+        System.out.println(Ann.getLastName());
+        System.out.println(Ann.getId());
+        Ann.getCalculatedSalary(47.64);
     }
 }
