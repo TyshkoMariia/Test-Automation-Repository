@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TasksClass {  // TasksClass
@@ -108,7 +109,7 @@ public class TasksClass {  // TasksClass
         ann.setName("Ann");
         ann.setLastName("Brown");
         ann.setId(2);
-        ann.PrintAvarageSalary(7655.11);*/
+        ann.PrintAvarageSalary(7655.11);
 
         FixedRateWorker Dex = new FixedRateWorker();
         Dex.setName("Dex");
@@ -126,6 +127,63 @@ public class TasksClass {  // TasksClass
         System.out.println(Ann.getName());
         System.out.println(Ann.getLastName());
         System.out.println(Ann.getId());
-        Ann.getCalculatedSalary(47.64);
+        Ann.getCalculatedSalary(47.64);*/
+
+        List<FixedSalaryWorker> fixedSalaryWorkerList = new ArrayList<FixedSalaryWorker>();
+
+        FixedSalaryWorker ann = new FixedSalaryWorker(1, "Ann", "Fisher", 3700);
+        FixedSalaryWorker ben = new FixedSalaryWorker(2, "Ben", "Claud", 2650.25);
+        FixedSalaryWorker lucie = new FixedSalaryWorker(3, "Lucie", "Tom", 4929.43);
+        FixedSalaryWorker zet = new FixedSalaryWorker(4, "Zet", "Johnson", 7200.5);
+        FixedSalaryWorker natan = new FixedSalaryWorker(5, "Natan", "Bread", 6140.15);
+        FixedSalaryWorker owen = new FixedSalaryWorker(6, "Owen", "Settleberry",7200.49);
+        FixedSalaryWorker piter = new FixedSalaryWorker(7, "Piter", "Pen", 8729.11);
+        FixedSalaryWorker conan = new FixedSalaryWorker(8, "Conan", "Zigmund", 12730.3);
+        FixedSalaryWorker den = new FixedSalaryWorker(9, "Den", "Martin", 15600.34);
+        FixedSalaryWorker frank = new FixedSalaryWorker(10, "Frank", "Polo", 2650.25);
+
+        fixedSalaryWorkerList.add(ann);
+        fixedSalaryWorkerList.add(ben);
+        fixedSalaryWorkerList.add(lucie);
+        fixedSalaryWorkerList.add(zet);
+        fixedSalaryWorkerList.add(natan);
+        fixedSalaryWorkerList.add(owen);
+        fixedSalaryWorkerList.add(piter);
+        fixedSalaryWorkerList.add(conan);
+        fixedSalaryWorkerList.add(den);
+        fixedSalaryWorkerList.add(frank);
+
+        SortWorkerListBySalaryAccending sortWorkersAccending = new SortWorkerListBySalaryAccending();
+        sortWorkersAccending.compare(ann, ben);
+        Collections.sort(fixedSalaryWorkerList, new SortWorkerListBySalaryAccending());
+
+
+        /*HourlySalaryWorker calculateHourlySalary = new HourlySalaryWorker();
+        List<HourlySalaryWorker> hourlySalaryWorkerList = new ArrayList<HourlySalaryWorker>();
+
+        HourlySalaryWorker rob = new HourlySalaryWorker(20, "Rob", "Roy", calculateHourlySalary.getCalculatedSalary(6, 122.15));
+        HourlySalaryWorker kalin = new HourlySalaryWorker(18, "Kalin", "Johnson",calculateHourlySalary.getCalculatedSalary(3, 140));
+        HourlySalaryWorker melvin = new HourlySalaryWorker(19, "Melvin", "Prestly", calculateHourlySalary.getCalculatedSalary(6, 122.15));
+        HourlySalaryWorker joshua = new HourlySalaryWorker(14, "Joshua", "Robinson", calculateHourlySalary.getCalculatedSalary(8, 240.56));
+        HourlySalaryWorker emma = new HourlySalaryWorker(17, "Emma", "White", calculateHourlySalary.getCalculatedSalary(10, 122.15));
+        HourlySalaryWorker lenny = new HourlySalaryWorker(11, "Lenny", "Krawitch",calculateHourlySalary.getCalculatedSalary(8, 240.56));
+        HourlySalaryWorker orwell = new HourlySalaryWorker(13, "Orwell", "McKinley", calculateHourlySalary.getCalculatedSalary(8, 240.56));
+        HourlySalaryWorker sunny = new HourlySalaryWorker(12, "Sunny", "Lane", calculateHourlySalary.getCalculatedSalary(10, 122.15));
+        HourlySalaryWorker ronald = new HourlySalaryWorker(15, "Ronald", "Quack", calculateHourlySalary.getCalculatedSalary(10, 122.15));
+        HourlySalaryWorker donald = new HourlySalaryWorker(16, "Donald", "Duck", calculateHourlySalary.getCalculatedSalary(6, 122.15));
+
+        hourlySalaryWorkerList.add(rob);
+        hourlySalaryWorkerList.add(kalin);
+        hourlySalaryWorkerList.add(melvin);
+        hourlySalaryWorkerList.add(joshua);
+        hourlySalaryWorkerList.add(emma);
+        hourlySalaryWorkerList.add(lenny);
+        hourlySalaryWorkerList.add(orwell);
+        hourlySalaryWorkerList.add(sunny);
+        hourlySalaryWorkerList.add(ronald);
+        hourlySalaryWorkerList.add(donald);*/
+
+
+
     }
 }

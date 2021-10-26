@@ -2,6 +2,7 @@ public class Worker {
     protected String name;
     protected String lastName;
     protected int id;
+    protected double salary;
 
     public void setName (String name){
         this.name = name;
@@ -26,5 +27,7 @@ public class Worker {
     public int getId (){
         return id;
     }
+
+
 
 }
